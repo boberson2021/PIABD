@@ -1,0 +1,10 @@
+1)
+select imie, nazwisko, szkola.rodzaj_szkoly from pracownicy, szkola where szkola.id=pracownicy.szkola and rodzaj_szkoly="liceum";
+
+2) 
+select imie, nazwisko, szkola.rodzaj_szkoly from pracownicy, szkola where szkola.id=pracownicy.szkola and rodzaj_szkoly="Nie uczeszcza";
+
+3)
+SELECT imie, nazwisko, szkola.rodzaj_szkoly, adres.miejscowosc FROM pracownicy, adres, szkola WHERE pracownicy.adres = adres.id AND pracownicy.szkola = szkola.id;
+
+SELECT imie, nazwisko, szkola.rodzaj_szkoly, adres.miejscowosc FROM pracownicy, adres, szkola WHERE pracownicy.adres = adres.id AND pracownicy.szkola = szkola.id and szkola.rodzaj_szkoly="Liceum" and adres.mieszkancy < 30000;
